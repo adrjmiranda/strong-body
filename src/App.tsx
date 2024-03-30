@@ -12,7 +12,13 @@ import Footer from './components/footer';
 const App: FunctionComponent = (): ReactNode => {
 	return (
 		<>
-			<h1>StrongBody</h1>
+			<Header />
+			<About />
+			<Services />
+			<Benefits />
+			<Testimonials />
+			<Contact />
+			<Footer />
 		</>
 	);
 };
