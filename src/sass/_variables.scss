@@ -1,3 +1,6 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 /* Colors */
 $deep_night_blue: #0f1322;
 $steel_grey: #4b545a;
@@ -6,6 +9,11 @@ $midnight_navy: #282e4e;
 $shadowy_indigo: #4b4f76;
 $rich_plum: #67204b;
 $rosy_mauve: #b14876;
+$radiant_sky_blue: #4fadfe;
+$bright_turquoise: #08edff;
+
+/* Font Family */
+$poppins: 'Poppins', sans-serif;
 
 /* Font Size */
 $fs_extra_small: 0.75rem;
@@ -31,3 +39,8 @@ $bw_large: 4px;
 $br_small: 2px;
 $br_medium: 5px;
 $br_large: 8px;
+
+/* Transitions */
+$transition_fast: all 0.3s ease;
+$transition_medium: all 0.5s ease;
+$transition_slow: all 0.1s ease;

@@ -2,7 +2,6 @@ import { FunctionComponent, ReactNode } from 'react';
 
 // Components
 import Navbar from '../navbar';
-import MainBanner from '../main-banner';
 
 // Style
 import style from './style.module.scss';
@@ -16,15 +15,22 @@ const Header: FunctionComponent = (): ReactNode => {
 			className={style.header}
 			style={{
 				backgroundImage:
-					'linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), ' +
+					'linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), ' +
 					'url(' +
 					MainBg +
 					')',
 			}}
 		>
 			<Navbar />
-			<MainBanner />
-			<div className={style.info}></div>
+			<div className={style.info}>
+				<h2>Challenge Your Limits Here!</h2>
+				<p>
+					Awaken your best version in our gym. A place where every effort is a
+					victory, and every drop of sweat is a step towards your goals. We are
+					here to challenge your limits. Come be part of this transformation!
+				</p>
+				<button className='button'>Subscribe</button>
+			</div>
 		</div>
 	);
 };

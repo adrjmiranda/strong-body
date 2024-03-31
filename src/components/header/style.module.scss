@@ -5,5 +5,31 @@
 	background-size: cover;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
-	min-height: 100vh;
+	min-height: 90vh;
+	position: relative;
+
+	.info {
+		background-color: $snow_white;
+		max-width: 800px;
+		border-radius: $br_medium;
+		padding: 2rem 6rem;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: -4rem;
+		box-shadow: 1px 1px 25px 5px rgba(0, 0, 0, 0.2);
+
+		h2 {
+			font-size: $fs_medium;
+			color: $deep_night_blue;
+		}
+
+		p {
+			font-size: $fs_normal;
+		}
+	}
 }

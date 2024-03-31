@@ -1,1 +1,114 @@
 @import '../../sass/base.scss';
+
+.navbar {
+	color: $snow_white;
+	padding: 1rem 0;
+
+	.content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+
+		.logo {
+			display: flex;
+			color: inherit;
+			align-items: center;
+			gap: 0.5rem;
+
+			img {
+				width: 30px;
+			}
+
+			span {
+				font-size: $fs_large;
+				font-weight: $fw_large;
+				color: inherit;
+				background-image: linear-gradient(
+					to right,
+					$rosy_mauve,
+					$rich_plum,
+					$shadowy_indigo,
+					$midnight_navy
+				);
+				background-clip: text;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				transition: $transition_fast;
+			}
+
+			&:hover {
+				span {
+					background-image: linear-gradient(
+						to right,
+						$midnight_navy,
+						$shadowy_indigo,
+						$rich_plum,
+						$rosy_mauve
+					);
+				}
+			}
+		}
+
+		.toggle_menu {
+			border: none;
+			background-color: transparent;
+			color: $snow_white;
+			cursor: pointer;
+			display: none;
+
+			svg {
+				font-size: 2rem;
+				transition: $transition_fast;
+			}
+
+			&:hover {
+				color: $bright_turquoise;
+			}
+
+			@media screen and (max-width: 768px) {
+				display: block;
+			}
+		}
+
+		.menu {
+			ul {
+				display: flex;
+				list-style: none;
+				gap: 1rem;
+
+				li a {
+					color: $snow_white;
+					font-weight: $fw_medium;
+					transform: $transition_fast;
+
+					&:hover {
+						background-image: linear-gradient(
+							to right,
+							$bright_turquoise,
+							$radiant_sky_blue
+						);
+						background-clip: text;
+						-webkit-background-clip: text;
+						-webkit-text-fill-color: transparent;
+					}
+				}
+			}
+
+			@media screen and (max-width: 768px) {
+				display: none;
+
+				&.show {
+					display: block;
+					width: 100%;
+
+					ul {
+						flex-direction: column;
+						align-items: flex-end;
+						margin-top: 2rem;
+					}
+				}
+			}
+		}
+	}
+}
