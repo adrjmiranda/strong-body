@@ -1,0 +1,77 @@
+@import '../../sass/base.scss';
+
+.about_card {
+	display: flex;
+	gap: 2rem;
+
+	& > div {
+		background-color: $snow_white;
+		padding: 2rem 1.5rem;
+		border-radius: $br_small;
+	}
+
+	.img {
+		flex: 50%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: 2rem;
+
+		img {
+			width: 50%;
+		}
+
+		.call {
+			display: flex;
+			flex-direction: column;
+			gap: 0.5rem;
+
+			.title {
+				color: $steel_grey;
+				text-transform: uppercase;
+				font-weight: bold;
+				font-size: $fs_medium;
+			}
+
+			.sub_title {
+				color: $deep_night_blue;
+				text-transform: capitalize;
+				font-size: $fs_medium;
+				font-weight: $fw_small;
+			}
+		}
+	}
+
+	.info {
+		flex: 50%;
+		display: flex;
+		justify-content: center;
+		gap: 1rem;
+		flex-direction: column;
+
+		h3 {
+			font-size: $fs_large;
+			color: $midnight_navy;
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+			text-transform: capitalize;
+
+			svg {
+				font-size: $fs_large;
+				color: $shadowy_indigo;
+			}
+		}
+
+		p {
+			color: $steel_grey;
+			text-align: justify;
+			line-height: 2;
+		}
+	}
+
+	@media screen and (max-width: 950px) {
+		flex-direction: column !important;
+	}
+}

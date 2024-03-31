@@ -1,1 +1,12 @@
 @import '../../sass/base.scss';
+
+.about {
+	background-color: $neutral_light_gray;
+	padding: 250px 0 150px;
+
+	.content {
+		display: flex;
+		flex-direction: column;
+		gap: 4rem;
+	}
+}

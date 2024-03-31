@@ -7,7 +7,6 @@
 	background-repeat: no-repeat;
 	min-height: 85vh;
 	position: relative;
-	margin-bottom: 8rem;
 
 	.info {
 		background-color: $snow_white;
@@ -27,11 +26,25 @@
 		h2 {
 			font-size: $fs_medium;
 			color: $deep_night_blue;
+			text-transform: uppercase;
 		}
 
 		p {
 			font-size: $fs_normal;
 			color: $steel_grey;
+		}
+
+		@media screen and (max-width: 950px) {
+			padding: 1rem 2rem;
+
+			h2 {
+				font-size: $fs_large;
+				font-weight: $fw_medium;
+			}
+
+			p {
+				display: none;
+			}
 		}
 	}
 }
