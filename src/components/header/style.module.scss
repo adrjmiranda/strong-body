@@ -5,8 +5,9 @@
 	background-size: cover;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
-	min-height: 90vh;
+	min-height: 85vh;
 	position: relative;
+	margin-bottom: 8rem;
 
 	.info {
 		background-color: $snow_white;
@@ -30,6 +31,7 @@
 
 		p {
 			font-size: $fs_normal;
+			color: $steel_grey;
 		}
 	}
 }

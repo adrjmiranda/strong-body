@@ -1,5 +1,8 @@
 import { FunctionComponent, ReactNode } from 'react';
 
+// Animation
+import { motion } from 'framer-motion';
+
 // Components
 import Navbar from '../navbar';
 
@@ -22,7 +25,15 @@ const Header: FunctionComponent = (): ReactNode => {
 			}}
 		>
 			<Navbar />
-			<div className={style.info}>
+			<motion.div
+				className={style.info}
+				whileInView={{
+					opacity: [0, 1],
+					y: ['16rem', '4rem'],
+					x: ['-50%', '-50%'],
+				}}
+				transition={{ duration: 1, delay: 0.5 }}
+			>
 				<h2>Challenge Your Limits Here!</h2>
 				<p>
 					Awaken your best version in our gym. A place where every effort is a
@@ -30,7 +41,7 @@ const Header: FunctionComponent = (): ReactNode => {
 					here to challenge your limits. Come be part of this transformation!
 				</p>
 				<button className='button'>Subscribe</button>
-			</div>
+			</motion.div>
 		</div>
 	);
 };
