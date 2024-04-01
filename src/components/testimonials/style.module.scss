@@ -1,1 +1,37 @@
 @import '../../sass/base.scss';
+
+.testimonials {
+	padding: 80px 0;
+
+	.top {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		margin-bottom: 80px;
+
+		h2 {
+			text-transform: capitalize;
+			font-size: $fs_extra_large;
+			color: $midnight_navy;
+			font-weight: $fw_medium;
+		}
+
+		p {
+			font-size: $fs_medium;
+		}
+	}
+
+	.users {
+		display: flex;
+		gap: 2.7rem;
+	}
+
+	@media screen and (max-width: 930px) {
+		.users {
+			flex-direction: column;
+			padding-left: 35px;
+			gap: 4rem;
+		}
+	}
+}
