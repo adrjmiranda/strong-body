@@ -2,6 +2,7 @@
 
 .contact {
 	margin-top: 80px;
+	position: relative;
 
 	.content {
 		background-image: linear-gradient(
@@ -18,6 +19,8 @@
 		text-align: center;
 		border-radius: $br_medium;
 		box-shadow: 1px 1px 15px 5px rgba(0, 0, 0, 0.1);
+		z-index: 999;
+		margin-bottom: -90px;
 
 		h2 {
 			font-size: $fs_large;
@@ -43,6 +46,22 @@
 
 				&:focus {
 					border: $bw_medium solid $radiant_sky_blue;
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 620px) {
+		.content {
+			form {
+				flex-direction: column;
+
+				input {
+					height: 55px;
+				}
+
+				button {
+					width: 100%;
 				}
 			}
 		}

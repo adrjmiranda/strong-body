@@ -7,6 +7,46 @@
 	padding: 0 1rem;
 }
 
+.logo {
+	display: flex;
+	color: inherit;
+	align-items: center;
+	gap: 0.5rem;
+
+	img {
+		width: 30px;
+	}
+
+	span {
+		font-size: $fs_large;
+		font-weight: $fw_large;
+		color: inherit;
+		background-image: linear-gradient(
+			to right,
+			$rosy_mauve,
+			$rich_plum,
+			$shadowy_indigo,
+			$midnight_navy
+		);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		transition: $transition_fast;
+	}
+
+	&:hover {
+		span {
+			background-image: linear-gradient(
+				to right,
+				$midnight_navy,
+				$shadowy_indigo,
+				$rich_plum,
+				$rosy_mauve
+			);
+		}
+	}
+}
+
 .button {
 	background-image: linear-gradient(-45deg, $rich_plum, $rosy_mauve);
 	opacity: 0.8;
