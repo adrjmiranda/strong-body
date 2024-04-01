@@ -1,5 +1,8 @@
 import { FunctionComponent, ReactNode } from 'react';
 
+// Animation
+import { motion } from 'framer-motion';
+
 // Style
 import style from './style.module.scss';
 
@@ -25,14 +28,36 @@ const Benefits: FunctionComponent = (): ReactNode => {
 			<div className='wrapper'>
 				<div className={style.content}>
 					<div className={style.img}>
-						<img src={GymHero} alt='Gym Hero' />
+						<motion.img
+							whileInView={{
+								opacity: [0, 1],
+								scale: [0.5, 1],
+							}}
+							transition={{ duration: 1, delay: 0.2 }}
+							src={GymHero}
+							alt='Gym Hero'
+						/>
 					</div>
 					<div className={style.info}>
 						<div className={style.item}>
-							<div className={style.icon}>
+							<motion.div
+								whileInView={{
+									opacity: [0, 1],
+									scale: [0.5, 1],
+								}}
+								transition={{ duration: 1, delay: 0.3 }}
+								className={style.icon}
+							>
 								<FaTrophy />
-							</div>
-							<div className={style.text}>
+							</motion.div>
+							<motion.div
+								whileInView={{
+									opacity: [0, 1],
+									x: [200, 0],
+								}}
+								transition={{ duration: 1, delay: 0.3 }}
+								className={style.text}
+							>
 								<h4>Earn certificate</h4>
 								<p>
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -40,13 +65,27 @@ const Benefits: FunctionComponent = (): ReactNode => {
 									quasi dolor illo aliquid labore cupiditate ducimus, cumque
 									asperiores corporis placeat dolore dolorum deleniti.
 								</p>
-							</div>
+							</motion.div>
 						</div>
 						<div className={style.item}>
-							<div className={style.icon}>
+							<motion.div
+								whileInView={{
+									opacity: [0, 1],
+									scale: [0.5, 1],
+								}}
+								transition={{ duration: 1, delay: 0.3 }}
+								className={style.icon}
+							>
 								<FaHeartPulse />
-							</div>
-							<div className={style.text}>
+							</motion.div>
+							<motion.div
+								whileInView={{
+									opacity: [0, 1],
+									x: [200, 0],
+								}}
+								transition={{ duration: 1, delay: 0.5 }}
+								className={style.text}
+							>
 								<h4>Improve your health</h4>
 								<p>
 									Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -54,7 +93,7 @@ const Benefits: FunctionComponent = (): ReactNode => {
 									iusto dicta rerum alias dignissimos ut! Cumque reiciendis
 									nulla nihil modi labore exercitationem.
 								</p>
-							</div>
+							</motion.div>
 						</div>
 					</div>
 				</div>
