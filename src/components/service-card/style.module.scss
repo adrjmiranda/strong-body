@@ -1,0 +1,34 @@
+@import '../../sass/base.scss';
+
+.service_card {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	box-shadow: 1px 1px 15px 5px rgba(0, 0, 0, 0.1);
+	border-radius: $br_small;
+	padding: 1rem;
+
+	.top {
+		display: flex;
+		gap: 1rem;
+		align-items: center;
+
+		img {
+			height: 40px;
+		}
+
+		span {
+			text-transform: uppercase;
+			color: $shadowy_indigo;
+			font-weight: $fw_extra_large;
+		}
+	}
+
+	.description {
+		p {
+			text-align: justify;
+			font-weight: $fw_small;
+			color: $steel_grey;
+		}
+	}
+}

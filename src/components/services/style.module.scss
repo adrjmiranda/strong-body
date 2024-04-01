@@ -1,1 +1,16 @@
 @import '../../sass/base.scss';
+
+.services {
+	padding: 100px 0;
+
+	.content {
+		display: flex;
+		gap: 3rem;
+	}
+
+	@media screen and (max-width: 950px) {
+		.content {
+			flex-wrap: wrap;
+		}
+	}
+}
