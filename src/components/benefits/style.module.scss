@@ -1,1 +1,101 @@
 @import '../../sass/base.scss';
+
+.benefits {
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	padding: 80px 0;
+
+	.content {
+		display: flex;
+		gap: 3rem;
+
+		.img {
+			flex: 50%;
+
+			img {
+				height: 450px;
+			}
+		}
+
+		.info {
+			flex: 50%;
+			color: $snow_white;
+			display: flex;
+			gap: 5rem;
+			flex-direction: column;
+
+			.item {
+				display: flex;
+				gap: 2rem;
+
+				.icon {
+					svg {
+						font-size: 5rem;
+					}
+				}
+
+				.text {
+					display: flex;
+					flex-direction: column;
+					gap: 1rem;
+
+					h4 {
+						font-size: $fs_medium;
+						text-transform: capitalize;
+						font-weight: $fw_medium;
+					}
+
+					p {
+						font-weight: $fw_small;
+						color: $neutral_light_gray;
+						text-align: justify;
+						line-height: 1.8;
+					}
+				}
+
+				&:nth-child(1) {
+					.icon {
+						svg {
+							color: goldenrod;
+						}
+					}
+				}
+
+				&:nth-child(2) {
+					.icon {
+						svg {
+							color: crimson;
+						}
+					}
+				}
+			}
+		}
+
+		@media screen and (max-width: 1024px) {
+			flex-direction: column;
+			text-align: center;
+
+			.info {
+				.item {
+					align-items: center;
+
+					.icon {
+						svg {
+							font-size: 10rem;
+						}
+					}
+				}
+			}
+		}
+
+		@media screen and (max-width: 576px) {
+			.info {
+				.item {
+					flex-direction: column;
+				}
+			}
+		}
+	}
+}
