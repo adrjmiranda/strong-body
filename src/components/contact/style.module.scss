@@ -1,1 +1,50 @@
 @import '../../sass/base.scss';
+
+.contact {
+	margin-top: 80px;
+
+	.content {
+		background-image: linear-gradient(
+			to top,
+			$radiant_sky_blue,
+			$bright_turquoise
+		);
+		color: $snow_white;
+		padding: 60px;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		align-items: center;
+		text-align: center;
+		border-radius: $br_medium;
+		box-shadow: 1px 1px 15px 5px rgba(0, 0, 0, 0.1);
+
+		h2 {
+			font-size: $fs_large;
+			text-transform: capitalize;
+		}
+
+		p {
+			font-size: $fs_medium;
+			font-weight: $fw_small;
+		}
+
+		form {
+			display: flex;
+			gap: 0.5rem;
+
+			input {
+				border: none;
+				border-radius: $br_medium;
+				padding: 0.5rem 1rem;
+				outline: none;
+				font-weight: $fw_medium;
+				border: $bw_medium solid transparent;
+
+				&:focus {
+					border: $bw_medium solid $radiant_sky_blue;
+				}
+			}
+		}
+	}
+}
