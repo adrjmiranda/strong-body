@@ -15,7 +15,7 @@ git clone https://github.com/adrjmiranda/strong-body
 2. Navigate to the project directory:
 
 ```
-cd adrj-digital-agency
+cd strong-body
 ```
 
 3. Install dependencies:
